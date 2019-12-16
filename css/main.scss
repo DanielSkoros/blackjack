@@ -87,6 +87,10 @@ main {
 }
 
 @media screen and (max-width: 768px){
+  main {
+    height: 87vh;
+  }
+
   .btn {
     padding: 20px 30px;
     font-size: 1.85rem;

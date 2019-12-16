@@ -5,6 +5,7 @@ export default class GameUI {
         dealerHand: '.dealer__hand',
         playerPoints: '.player__points',
         dealerPoints: '.dealer__points',
+        winner: '.winner'
     };
 
     constructor(){
@@ -12,6 +13,7 @@ export default class GameUI {
         this.dealerHand = document.querySelector(this.DOMElements.dealerHand);
         this.playerPoints = document.querySelector(this.DOMElements.playerPoints);
         this.dealerPoints = document.querySelector(this.DOMElements.dealerPoints);
+        this.winner = document.querySelector(this.DOMElements.winner);
     }
 
     dealStartingHands(players){
@@ -109,7 +111,13 @@ export default class GameUI {
     }
 
     displayWinnerAlert(id){
-        console.log(`Winner: ${id}`)
+        if (id === 1){
+            this.winner.textContent = 'You won!';
+            this.winner.classList.add('winner__visible');
+        }else {
+            this.winner.textContent = 'You lost';
+            this.winner.classList.add('winner__visible');
+        }
     }
 
 }

@@ -24,5 +24,6 @@ document.querySelector('#stay').addEventListener('click', () => {
 
 document.querySelector('#new').addEventListener('click', () => {
     document.querySelector('#hit').removeAttribute('disabled')
+    document.querySelector('.winner').classList.remove('winner__visible')
     gamePlay.nextRound();
 });

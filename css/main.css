@@ -82,6 +82,18 @@ main .controls {
   color: black;
 }
 
+.winner {
+  display: none;
+}
+
+.winner__visible {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
 @keyframes showCard {
   from {
     transform: translateY(-50px);
@@ -92,7 +104,7 @@ main .controls {
 }
 @media screen and (max-width: 768px) {
   main {
-    height: 87vh;
+    height: 87vh !important;
   }
 
   .btn {

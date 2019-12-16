@@ -20,11 +20,10 @@ header {
 }
 
 .btn {
-  padding: 20px 30px;
+  padding: 10px 15px;
   color: white;
   background: transparent;
   border: 2px solid black;
-  font-size: 1.85rem;
 }
 
 .deck__counter {
@@ -89,6 +88,12 @@ main .controls {
   }
   to {
     transform: translateY(0);
+  }
+}
+@media screen and (max-width: 768px) {
+  .btn {
+    padding: 20px 30px;
+    font-size: 1.85rem;
   }
 }
 

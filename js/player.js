@@ -5,10 +5,11 @@ export default class Player {
     }
 
     createPlayers() {
+        this.players = [];
         for (let i = 0; i < this.numberOfPlayers; i++){
             let hand = [];
             const player = {
-                name: 'Player',
+                name: `Player ${i}`,
                 id: i,
                 dealer: i === 0,
                 hand: hand,

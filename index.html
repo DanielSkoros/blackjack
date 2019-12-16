@@ -11,13 +11,19 @@
 </header>
 <main>
     <div class="deck">
-        <div class="deck__counter">Cards left: <span class="deck__cardsLeft">52</span></div>
     </div>
-    <div class="players"></div>
+        <div class="dealer">
+            <ul class="dealer__hand"></ul>
+            <div class="dealer__points">00</div>
+        </div>
+        <div class="player">
+            <ul class="player__hand"></ul>
+            <div class="player__points">00</div>
+        </div>
     <div class="controls">
-        <input type="button" class="btn" value="New Game">
-        <input type="button" class="btn" value="Hit">
-        <input type="button" class="btn" value="Stay">
+        <input type="button" class="btn" value="Next round" id="new">
+        <input type="button" class="btn" value="Hit" id="hit">
+        <input type="button" class="btn" value="Stay" id="stay">
     </div>
 </main>
 

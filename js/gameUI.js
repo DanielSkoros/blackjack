@@ -36,9 +36,15 @@ export default class GameUI {
             liElement.setAttribute('class', 'card');
 
             const value = document.createElement('span');
-            value.textContent = `${card.value} ${card.suit}`;
-
+            const suit = document.createElement('span');
+            if (card.suit === '♥' || card.suit === '♦'){
+                value.classList.add('red');
+                suit.classList.add('red');
+            }
+            value.textContent = `${card.value}`;
             liElement.appendChild(value);
+            suit.textContent = `${card.suit}`;
+            liElement.appendChild(suit);
             dealerFragment.appendChild(liElement);
         });
 
@@ -47,9 +53,16 @@ export default class GameUI {
             liElement.setAttribute('class', 'card');
 
             const value = document.createElement('span');
-            value.textContent = `${card.value} ${card.suit}`;
+            const suit = document.createElement('span');
 
+            if (card.suit === '♥' || card.suit === '♦'){
+                value.classList.add('red');
+                suit.classList.add('red');
+            }
+            value.textContent = `${card.value}`;
             liElement.appendChild(value);
+            suit.textContent = `${card.suit}`;
+            liElement.appendChild(suit);
             playerFragment.appendChild(liElement);
         });
 
@@ -74,9 +87,19 @@ export default class GameUI {
         liElement.setAttribute('class', 'card');
 
         const value = document.createElement('span');
-        value.textContent = `${card.value} ${card.suit}`;
+        const suit = document.createElement('span');
 
+        if (card.suit === '♥' || card.suit === '♦'){
+            value.classList.add('red');
+            suit.classList.add('red');
+        }
+
+        value.textContent = `${card.value}`;
         liElement.appendChild(value);
+        suit.textContent = `${card.suit}`;
+        liElement.appendChild(suit);
+
+
 
         if (id === 0){
             this.dealerHand.appendChild(liElement);
